@@ -1,0 +1,33 @@
+*.log
+my_api_id.py
+secret.ps1
+secrets.ps1
+secret.sh
+secrets.sh
+
+__pycache__/
+ *.pyc
+
+# Retrouver la taille du répertoire projet
+# Github 5GB max
+# (Get-ChildItem . -Recurse | Measure-Object -Property Length -sum).sum/1GB
+
+# large files Size > 100MB (warning à 50MB)
+# pas moyen de spécifier la taille dans .gitignore
+# Get-ChildItem ./ -recurse | where-object {$_.length -gt 100000000} | Sort-Object length | ft fullname, length -auto
+uber-trip-data.zip
+cifar10.zip
+911.csv
+uber-raw-data-janjune-15.csv
+noisy_digits.csv
+
+# see 07_deep_learning\11_Attention\training_checkpoints
+training_checkpoints/
+
+#
+# Get-ChildItem -Path . -Directory -Recurse -Force | Where-Object { $_.Name -eq ".aws" }
+.aws/
+
+
+# This may help
+# Get-ChildItem -Path . -Filter *.png -Recurse | Select-Object -ExpandProperty FullName

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/phili/OneDrive/Documents/Programmation/Formations_JEDHA/fullstack_mars_2024/08_deployment/06_Package_Serve_MLFlow/02_simple_mlflow_bis/mlruns/0/121282efdf30417e80c4fb3fa88f8db7/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 121282efdf30417e80c4fb3fa88f8db7
+run_name: crawling-whale-453
+run_uuid: 121282efdf30417e80c4fb3fa88f8db7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716987512007
+status: 1
+tags: []
+user_id: phili

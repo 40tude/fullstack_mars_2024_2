@@ -1,0 +1,15 @@
+docker run -it -p 4000:4000 -v "$(pwd):/home/app" -e PORT=4000 -e AWS_ACCESS_KEY_ID=$env:AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$env:AWS_SECRET_ACCESS_KEY -e BACKEND_STORE_URI=$env:BACKEND_STORE_URI -e ARTIFACT_STORE_URI=$env:ARTIFACT_STORE_URI sample-mlflow-server
+
+# y a un espace AVANT le `
+# y a pas d'espace après de ` (bien vérifier avec la touche Fin)
+# y a un espace avant les -p, -e etc.
+
+docker run -it `
+    -p 4000:4000 `
+    -v "$(PWD):/home/app" `
+    -e PORT=4000 `
+    -e AWS_ACCESS_KEY_ID=$env:AWS_ACCESS_KEY_ID `
+    -e AWS_SECRET_ACCESS_KEY=$env:AWS_SECRET_ACCESS_KEY `
+    -e BACKEND_STORE_URI=$env:BACKEND_STORE_URI `
+    -e ARTIFACT_STORE_URI=$env:ARTIFACT_STORE_URI `
+    sample-mlflow-server

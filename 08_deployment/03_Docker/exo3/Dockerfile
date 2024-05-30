@@ -1,0 +1,28 @@
+# A partir du répertoire exo1 où se trouve Dockerfile
+# exo3
+#   Dockerfile
+#   app
+#     exo3.py
+
+
+
+# docker build -t exo3_image .
+# docker run -it --rm -v "$(pwd)/app:/home/app" -e PORT:80 -p 4000:80 exo3_image bash
+# Une fois sour bash
+#     streamlit run ./exo3.py --server.port 80
+# Client Web localhost:4000
+
+
+FROM python:3.12-slim
+
+RUN pip install streamlit
+RUN pip install pandas
+RUN pip install plotly
+RUN pip install numpy
+# EXPOSE 4000
+WORKDIR /home/app
+COPY    /app/exo3.py ./
+
+#CMD python exo3.py
+# ENTRYPOINT ["streamlit", "run", "exo3.py", "--server.port=4000", "--server.address=0.0.0.0"]
+
