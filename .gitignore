@@ -4,6 +4,8 @@ secret.ps1
 secrets.ps1
 secret.sh
 secrets.sh
+# fichiers type my-keypair.pem
+*.pem
 
 __pycache__/
  *.pyc
