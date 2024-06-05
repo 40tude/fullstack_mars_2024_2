@@ -1,10 +1,10 @@
 pandas 
 # gunicorn 
-streamlit 
-# scikit-learn 
+# streamlit 
+scikit-learn==1.4.2 
 # matplotlib 
 # seaborn 
 # plotly
 boto3
-mlflow
+mlflow==2.13.1
 psycopg2-binary

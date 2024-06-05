@@ -2,6 +2,8 @@ import argparse
 import pandas as pd
 import time
 import mlflow
+import sklearn
+
 from mlflow.models.signature import infer_signature
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -9,6 +11,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.pipeline import Pipeline
 
 if __name__ == "__main__":
+    print("<START>...")
+    print("mlflow version       : ", mlflow.__version__)
+    print("scikit-learn version : ", sklearn.__version__)
 
     ### MLFLOW Experiment setup
     experiment_name = "05_06_Calif_Housing"
@@ -75,3 +80,4 @@ if __name__ == "__main__":
 
     print("...Done!")
     print(f"---Total training time: {time.time()-start_time}")
+    print("<STOP>...")

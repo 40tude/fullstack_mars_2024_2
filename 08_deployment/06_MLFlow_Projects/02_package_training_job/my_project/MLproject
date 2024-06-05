@@ -2,7 +2,11 @@
 name: californian_housing_market 
 
 docker_env:
-  image: jedha/sample-mlflow-server
+  image: sample-mlflow-server
+  # la ligne de commande 
+  #   docker run --rm -v ${pwd}:/home/app jedha/sample-mlflow-server ls /home/app 
+  # fonctionne
+  #volumes: ["${pwd}:/home/app"] # sort en erreur
   volumes: ["%cd%:/home/app"]
   environment: [
       "MLFLOW_TRACKING_URI", 
