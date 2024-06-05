@@ -1,0 +1,12 @@
+[browser]
+serverAddress = '0.0.0.0'
+
+[global]
+dataFrameSerialization = "legacy"
+
+[theme]
+base="dark"
+primaryColor="#4be8e0"
+
+[server]
+runOnSave = true

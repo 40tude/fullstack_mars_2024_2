@@ -1,0 +1,25 @@
+# Name of the experiment (and the new docker image that MLFlow will create when running the file)
+name: californian_housing_market 
+
+docker_env:
+  #image: jedha/sample-mlflow-server
+  image: train_lite
+  # volumes: ["C:/Users/phili/OneDrive/Documents/Programmation/Formations_JEDHA/fullstack_mars_2024/08_deployment/06_Package_Serve_MLFlow/02_package training_job/my_project:/home/app"]
+  volumes: ["%cd%:/home/app"]
+  environment: [
+      "MLFLOW_TRACKING_URI", 
+      "AWS_ACCESS_KEY_ID",
+      "AWS_SECRET_ACCESS_KEY",
+      "BACKEND_STORE_URI",
+      "ARTIFACT_ROOT"
+    ]
+    
+entry_points:
+  main:
+    parameters:
+      # Parameter for our training
+      n_estimators: {type: int, default: 15} 
+      # Parameter for our training
+      min_samples_split: {type: int, default: 3} 
+    # Command that will be run when running that file 
+    command: "python train.py --n_estimators {n_estimators} --min_samples_split {min_samples_split}" 

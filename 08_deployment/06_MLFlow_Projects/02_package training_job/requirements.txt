@@ -1,0 +1,10 @@
+pandas 
+# gunicorn 
+streamlit 
+# scikit-learn 
+# matplotlib 
+# seaborn 
+# plotly
+boto3
+mlflow
+psycopg2-binary
